@@ -140,7 +140,8 @@ function getTaskByDay(id)  {
 
            // let lihtml = "<li>" + taches[i].title +" </li>"
             let li = document.createElement("li");
-            li.innerHTML = taches[i].title;
+            li.innerHTML = taches[i].title + '<a href="#" title="Remove note" class="removeNote animate" onclick="removeTask(' + id.target.id + '), removeTache(' + id.target.id + ')">x</a>';;
+
             ul.appendChild(li);
 
         }
