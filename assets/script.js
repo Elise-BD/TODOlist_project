@@ -168,3 +168,35 @@ dateElements.forEach(function (dateElement) {
 
     });
 });
+
+const buttons = document.querySelectorAll('.color-button');
+const colors = ['#D35400', '#3498DB', '#27AE60', '#E74C3C', '#9B59B6'];
+
+buttons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const color = colors[index];
+
+        // Change the color of .calendar .days li .event elements
+        document.querySelectorAll('.calendar .days li .event').forEach((element) => {
+            element.style.color = color;
+        });
+
+        // Change the background color of .calendar .days li .selected elements
+        document.querySelectorAll('.calendar .days li .selected').forEach((element) => {
+            element.style.backgroundColor = color;
+        });
+
+        // Change the background color of .calendar .notes input
+        document.querySelector('.calendar .notes input').style.backgroundColor = color;
+
+        // Change the background color of .calendar .leftCol
+        document.querySelector('.calendar .leftCol').style.backgroundColor = color;
+
+        // Change the color of <a> elements that have the "event" class
+        document.querySelectorAll('a.event').forEach((element) => {
+            element.style.color = color;
+        });
+    });
+});
+
+

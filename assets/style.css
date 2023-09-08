@@ -212,6 +212,48 @@ a{
     color: #D35400 ;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+    text-align: center;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
+}
+
+
+.color-button {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.color-button:hover {
+    background-color: #D35400;
+    color: #ffffff;
+}
+
+#button1{
+    background-color: #D35400;
+}
+#button2{
+    background-color: #3498DB;
+}
+#button3{
+    background-color: #27AE60;
+}
+#button4{
+    background-color: #E74C3C;
+}
+#button5{
+    background-color: #9B59B6;
+}
+
 
 /* placeholder color */
 ::-webkit-input-placeholder {color: #ffffff; }
