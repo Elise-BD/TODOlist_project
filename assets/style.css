@@ -29,7 +29,7 @@ p{
 
 a{
     text-decoration: none;
-    color: #FF462B;
+    color: #3D8066;
 }
 
 .clearfix{
@@ -204,12 +204,12 @@ a{
 }
 
 .calendar .days li .selected{
-    background-color: #F5A1A3!important;
+    background-color:#3D8066!important;
     color: #ffffff;
 }
 
 .calendar .days li .event{
-    color: #F5A1A3;
+    color: #3D8066;
 }
 
 
