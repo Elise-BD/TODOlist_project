@@ -1,4 +1,28 @@
 let taches = [];
+
+let predifinedTask8= {
+    title: "Update GIT",
+        description: "A git update",
+        day: 8,
+        status: true,
+};
+let predifinedTask10= {
+    title: "Rollback GIT",
+    description: "A git rollback",
+    day: 10,
+    status: true,
+};
+let predifinedTask27= {
+    title: "Rollback GIT",
+    description: "A git rollback",
+    day: 27,
+    status: true,
+};
+
+taches.push(predifinedTask8);
+taches.push(predifinedTask10);
+taches.push(predifinedTask27);
+
 generateLi();
 function addTache(id) {
     let title = document.getElementById("title").value;
@@ -79,5 +103,7 @@ dateElements.forEach(function (dateElement) {
         if (dateElement.classList.contains('event')) {
             dateElement.style.color = 'white'; // Change font color to white for selected events
         }
+
+
     });
 });
