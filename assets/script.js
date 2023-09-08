@@ -4,7 +4,7 @@ let tasksForTheDay= [];
 let predifinedTask8= {
     title: "Update GIT",
         description: "A git update",
-        day: 8,
+        day: 9,
         status: true,
 };
 let predifinedTask10= {
