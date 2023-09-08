@@ -37,7 +37,7 @@ function addLi(id) {
         let ul = document.querySelector(".noteList");
         let li = document.createElement("li");
         li.dataset.taskId = taskIdCounter; // Assign a unique task ID
-        li.innerHTML = title + '<a href="#" title="Remove note" class="removeNote animate" onclick="removeTask(' + taskIdCounter + ')">x</a>';
+        li.innerHTML = title + '<a href="#" title="Remove note" class="removeNote animate" onclick="removeTask(' + taskIdCounter + '), removeTache(' + taskIdCounter + ')">x</a>';
         ul.appendChild(li);
 
         // Clear the input field after adding the task
@@ -51,7 +51,7 @@ function addTache(id) {
 
     let task = {
         title: null,
-        //description: "",
+        description: "",
         day: 0,
         status: true,
     };
@@ -117,11 +117,18 @@ function changeH1(id) {
     h.textContent = id.target.id + " septembre";
     getTaskByDay(id);
 }
+
+
+let f;
 function changePlusButton(id) {
+    console.log(id.target.id);
     let add = document.getElementById("add");
-    add.addEventListener("click", function() {
+    add.removeEventListener("click",f);
+    f=function() {
         addTache(parseInt(id.target.id));
-    });
+        console.log(parseInt(id.target.id));
+    }
+    add.addEventListener("click", f);
 }
 
 function getTaskByDay(id)  {
