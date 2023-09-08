@@ -60,6 +60,7 @@ function addTache(id) {
     task.day = id;
 
     taches.push(task);
+    addLi(id);
 }
 
 // Add a function to remove a task by its unique task ID
