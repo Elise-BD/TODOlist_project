@@ -26,7 +26,7 @@ taches.push(predifinedTask27);
 generateLi();
 let taskIdCounter = 0; // Add this line to create unique task IDs
 
-function addTache(id) {
+function addLi(id) {
     let title = document.getElementById("title").value;
 
     if (title) {
@@ -42,6 +42,24 @@ function addTache(id) {
         // Clear the input field after adding the task
         document.getElementById("title").value = "";
     }
+}
+
+function addTache(id) {
+    let title = document.getElementById("title").value;
+    //let description = document.getElementById("").value;
+
+    let task = {
+        title: null,
+        //description: "",
+        day: 0,
+        status: true,
+    };
+
+    task.title = title;
+    //task.description = description;
+    task.day = id;
+
+    taches.push(task);
 }
 
 // Add a function to remove a task by its unique task ID
@@ -64,6 +82,7 @@ function generateLi() {
         a.innerText = _i;
         a.setAttribute("data-value", `${_i}`);
         a.addEventListener("click",changeH1);
+        a.addEventListener("click", changePlusButton);
 
         if( _i === 8 ){ a.classList.add("selected"); }
 
@@ -84,6 +103,12 @@ function generateLi() {
 function changeH1(id) {
     let h = document.querySelector("h1");
     h.textContent = id.target.id + " septembre";
+}
+function changePlusButton(id) {
+    let add = document.getElementById("add");
+    add.addEventListener("click", function() {
+        addTache(parseInt(id.target.id));
+    });
 }
 
 
