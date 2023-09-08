@@ -1,4 +1,5 @@
 let taches = [];
+let tasksForTheDay= [];
 
 let predifinedTask8= {
     title: "Update GIT",
@@ -104,6 +105,7 @@ function generateLi() {
 function changeH1(id) {
     let h = document.querySelector("h1");
     h.textContent = id.target.id + " septembre";
+    getTaskByDay(id);
 }
 function changePlusButton(id) {
     let add = document.getElementById("add");
@@ -112,6 +114,18 @@ function changePlusButton(id) {
     });
 }
 
+function getTaskByDay(id)  {
+    let ul = document.getElementsByClassName("noteList").item(0);
+    ul.innerHTML="";
+    for (var i = 0; i < taches.length; i++) {
+        if(taches[i].day == id.target.id){
+            tasksForTheDay.push(taches[i]);
+
+            let lihtml = "<li>" + taches[i].title +" </li>"
+            ul.innerHTML=lihtml;
+        }
+    }
+}
 
 
 // Get all the date elements with class "event"
