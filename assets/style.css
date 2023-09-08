@@ -90,7 +90,7 @@ a{
 
 .calendar .leftCol{
     width: 40%;
-    background-color: #ff4949;
+    background-color: #3D8066;
 }
 
 .calendar .noteList li{
@@ -110,7 +110,7 @@ a{
 }
 
 .calendar .notes input{
-    background-color: #ff4949;
+    background-color: #3D8066;
     color: #ffffff;
     border: none;
     width: 200px;
@@ -204,12 +204,12 @@ a{
 }
 
 .calendar .days li .selected{
-    background-color: #ff4949!important;
+    background-color: #F5A1A3!important;
     color: #ffffff;
 }
 
 .calendar .days li .event{
-    color: #ff4949;
+    color: #F5A1A3;
 }
 
 
@@ -217,4 +217,4 @@ a{
 ::-webkit-input-placeholder {color: #ffffff; }
 :-moz-placeholder {color: #ffffff; }
 ::-moz-placeholder {color: #ffffff; }
-:-ms-input-placeholder {color: #ffffff; }
+:-ms-input-placeholder {color: rgb(255, 255, 255); }
