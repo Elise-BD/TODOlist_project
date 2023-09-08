@@ -60,7 +60,7 @@ dateElements.forEach(function (dateElement) {
 
             // Check if the previously selected date had both "event" and "selected" classes
             if (selectedDate.classList.contains('event')) {
-                selectedDate.style.color = '#3D8066'; // Change font color back to #F48989 for selected events
+                selectedDate.style.color = '#D35400'; // Change font color back to #F48989 for selected events
             }
         }
 
