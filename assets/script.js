@@ -24,23 +24,34 @@ taches.push(predifinedTask10);
 taches.push(predifinedTask27);
 
 generateLi();
+let taskIdCounter = 0; // Add this line to create unique task IDs
+
 function addTache(id) {
     let title = document.getElementById("title").value;
-    let description = document.getElementById("").value;
 
-    let task = {
-        title: null,
-        description: "",
-        day: 0,
-        status: true,
-    };
+    if (title) {
+        // Generate a unique task ID
+        taskIdCounter++;
 
-    task.title = title;
-    task.description = description;
-    task.day = id;
+        let ul = document.querySelector(".noteList");
+        let li = document.createElement("li");
+        li.dataset.taskId = taskIdCounter; // Assign a unique task ID
+        li.innerHTML = title + '<a href="#" title="Remove note" class="removeNote animate" onclick="removeTask(' + taskIdCounter + ')">x</a>';
+        ul.appendChild(li);
 
-    taches.push(task);
+        // Clear the input field after adding the task
+        document.getElementById("title").value = "";
+    }
 }
+
+// Add a function to remove a task by its unique task ID
+function removeTask(taskId) {
+    let taskToRemove = document.querySelector('li[data-task-id="' + taskId + '"]');
+    if (taskToRemove) {
+        taskToRemove.remove();
+    }
+}
+
 
 function generateLi() {
     let el, a;
