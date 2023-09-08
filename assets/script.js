@@ -36,7 +36,7 @@ function addLi(id) {
         let ul = document.querySelector(".noteList");
         let li = document.createElement("li");
         li.dataset.taskId = taskIdCounter; // Assign a unique task ID
-        li.innerHTML = title + '<a href="#" title="Remove note" class="removeNote animate" onclick="removeTask(' + taskIdCounter + ')">x</a>';
+        li.innerHTML = title + '<a href="#" title="Remove note" class="removeNote animate" onclick="removeTask(' + taskIdCounter + '),removeTache(' + taskIdCounter + ')">x</a>';
         ul.appendChild(li);
 
         // Clear the input field after adding the task
@@ -63,6 +63,16 @@ function addTache(id) {
     addLi(id);
 }
 
+function removeTache(id) {
+    for (let i = 0; i < taches.length; i++) {
+        if (taches[i].day === id) {
+            taches.splice(i, 1);
+            // On décrémente "i" pour compenser le décalage créé par "splice"
+            i--;
+        }
+    }
+}
+
 // Add a function to remove a task by its unique task ID
 function removeTask(taskId) {
     let taskToRemove = document.querySelector('li[data-task-id="' + taskId + '"]');
@@ -84,6 +94,7 @@ function generateLi() {
         a.setAttribute("data-value", `${_i}`);
         a.addEventListener("click",changeH1);
         a.addEventListener("click", changePlusButton);
+
 
         if( _i === 8 ){ a.classList.add("selected"); }
 
@@ -111,8 +122,6 @@ function changePlusButton(id) {
         addTache(parseInt(id.target.id));
     });
 }
-
-
 
 // Get all the date elements with class "event"
 var dateElements = document.querySelectorAll('.days a');
