@@ -179,18 +179,37 @@ dateElements.forEach(function (dateElement) {
 const buttons = document.querySelectorAll('.color-button');
 const colors = ['#D35400', '#3498DB', '#27AE60', '#E74C3C', '#9B59B6'];
 
+// Function to change colors
+let selectedColor = colors[0]; // Initialize the selected color with the first color
+
+
+// Function to change colors// Function to change colors
 buttons.forEach((button, index) => {
     button.addEventListener('click', () => {
         const color = colors[index];
+        selectedColor = color; // Update the selected color
+
+        // Reset the styles of all date elements
+        dateElements.forEach((element) => {
+            element.style.backgroundColor = '';
+            element.style.color = 'inherit';
+
+            // Check if the date element has the "event" class
+            if (!element.classList.contains('event')) {
+                element.style.color = '#747978'; // Set the color to #747978 for dates without the "event" class
+            }
+        });
+
+        // Change the background color of the selected date to match the button color
+        const selectedDate = document.querySelector('.days a.selected');
+        if (selectedDate) {
+            selectedDate.style.backgroundColor = color;
+            selectedDate.style.color = 'white';
+        }
 
         // Change the color of .calendar .days li .event elements
         document.querySelectorAll('.calendar .days li .event').forEach((element) => {
             element.style.color = color;
-        });
-
-        // Change the background color of .calendar .days li .selected elements
-        document.querySelectorAll('.calendar .days li .selected').forEach((element) => {
-            element.style.backgroundColor = color;
         });
 
         // Change the background color of .calendar .notes input
@@ -205,5 +224,10 @@ buttons.forEach((button, index) => {
         });
     });
 });
+
+
+
+
+
 
 
