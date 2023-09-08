@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e9e77d-4cb1-466f-ac5d-9b20a6cdb770" name="Changes" comment="Traduction francais">
+    <list default="true" id="29e9e77d-4cb1-466f-ac5d-9b20a6cdb770" name="Changes" comment="Modif ondateclick">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694172324900</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Modif jours">
+      <option name="closed" value="true" />
+      <created>1694173307773</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694173307773</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Modif jours">
+      <option name="closed" value="true" />
+      <created>1694173355232</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694173355233</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +113,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="Traduction francais" />
-    <option name="LAST_COMMIT_MESSAGE" value="Traduction francais" />
+    <MESSAGE value="Modif jours" />
+    <MESSAGE value="Modif ondateclick" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modif ondateclick" />
   </component>
 </project>
