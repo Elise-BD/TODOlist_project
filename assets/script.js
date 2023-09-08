@@ -138,10 +138,14 @@ function getTaskByDay(id)  {
         if(taches[i].day == id.target.id){
             tasksForTheDay.push(taches[i]);
 
-            let lihtml = "<li>" + taches[i].title +" </li>"
-            ul.innerHTML=lihtml;
+           // let lihtml = "<li>" + taches[i].title +" </li>"
+            let li = document.createElement("li");
+            li.innerHTML = taches[i].title;
+            ul.appendChild(li);
+
         }
     }
+    ul.innerHTML=lihtml;
 }
 
 
