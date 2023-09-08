@@ -1,4 +1,3 @@
-/* not required */
 *,:active{
     outline: none;
 }
@@ -47,7 +46,7 @@ a{
 /* required */
 .calendar{
     position: absolute;
-    border-radius: 4px;
+    border-radius: 20px;
     overflow: hidden;
     width: 800px;
     height: 450px;
