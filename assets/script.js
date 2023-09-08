@@ -28,11 +28,12 @@ function generateLi() {
         a.id = _i;
         a.innerText = _i;
         a.setAttribute("data-value", `${_i}`);
+        a.addEventListener("click",changeH1);
 
-        if( _i === 12 ){ a.classList.add("selected"); }
+        if( _i === 8 ){ a.classList.add("selected"); }
 
         switch( _i ){
-            case 8:
+            case 9:
             case 10:
             case 27:
                 a.classList.add("event");
@@ -44,6 +45,13 @@ function generateLi() {
         document.getElementsByClassName("days").item(0).append(el);
     }
 }
+
+function changeH1(id) {
+    let h = document.querySelector("h1");
+    h.textContent = id.target.id + " septembre";
+}
+
+
 
 // Get all the date elements with class "event"
 var dateElements = document.querySelectorAll('.days a');
